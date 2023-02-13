@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Placa</title>
+</head>
+
+<body>
+    <style>
+        #placa,
+        #transportadora,
+        #doca {
+            width: 200px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        #placa2,
+        #transportadora2,
+        #doca2 {
+            width: 200px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        input {
+            display: inline-block;
+            position: left;
+            padding-right: 50em;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body,
+        input,
+        select,
+        button {
+            font-family: sans-serif;
+            font-size: 1em;
+            color: midnightblue;
+            text-align: left;
+        }
+        
+        .col {
+            margin-bottom: 1em;
+        }
+        
+        .col label {
+            margin-bottom: 0.2em;
+            color: rgb(0, 0, 0);
+        }
+        
+        .form-control {
+            width: 15em;
+        }
+        
+        .col select,
+        input,
+        button {
+            border-radius: 5px;
+            padding: 0.2em;
+            border: 1px solid #CCC;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            text-align: left;
+        }
+        
+        .submit {
+            font-size: 1.5em;
+            background: midnightblue;
+            border: 0;
+            margin-bottom: 1em;
+            color: #FFF;
+            padding: 0.2em 0.6em;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        }
+        
+        .título {
+            color: midnightblue
+        }
+        
+        .inputButton {
+            border-radius: 1rem;
+        }
+        
+        body {
+            background-color: #b7e0f4;
+        }
+        
+        hr {
+            border-width: 1;
+            height: 1px;
+            border-top-width: 1px;
+        }
+        
+        .menu {
+            width: 100%;
+            background-color: rgb(138, 221, 193);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .menu li {
+            float: left;
+            display: inline;
+        }
+        
+        .menu ul {
+            margin: 20px;
+            padding: 0;
+            background-color: gray;
+        }
+        
+        .menu li a {
+            display: block;
+            color: black;
+            padding: 8px 16px;
+            text-decoration: none;
+            font-size: medium;
+        }
+        
+        img {
+            padding-right: 13em;
+        }
+    </style>
+    <div class="1">
+        <br>
+        <nav class="menu">
+            <ul>
+                <li><b><a href="#">Início</li></b></a>
+                    <li><b><a href="https://viniciusxavier-lab.github.io/paineldechegadavigor.github.io/">Painel de Chegada</a></b></li>
+            </ul>
+        </nav>
+        <center>
+            <img src="Design sem nome (3) copy.png" style="width: 250px;"></center>
+        <center>
+            <h1 class="título">CADASTRAR PLACA</h1>
+        </center>
+        <form>
+            <center>
+                <hr>
+                <br>
+                <div class="div1">
+                    <b><label>PLACA:</label></b>
+                    <input type="text" value="" id="placa"> &nbsp;&nbsp;
+                    <label><b>TRANSPORTADORA:</label></b>
+                    <input type="text" value="" id="transportadora">&nbsp;&nbsp;
+                    <label><b>DOCA:</label></b>
+                    <input type="text" value="" id="doca">&nbsp;&nbsp;
+                    <input type="button" class="submit" id="inputButton" value="CADASTRAR">&nbsp;&nbsp;&nbsp;
+                    <br>
+                </div>
+                <hr>
+                <br>
+            </center>
+            <br><br>
+            <center>
+                <hr>
+                <br>
+                <div class="div2">
+                    <b><label>PLACA:</label></b>
+                    <input type="text" value="" id="placa2"> &nbsp;&nbsp;
+                    <label><b>TRANSPORTADORA:</label></b>
+                    <input type="text" value="" id="transportadora2">&nbsp;&nbsp;
+                    <label><b>DOCA:</label></b>
+                    <input type="text" value="" id="doca2">&nbsp;&nbsp;
+                    <input type="button" class="submit" id="inputButton2" value="CADASTRAR">&nbsp;&nbsp;&nbsp;
+                    <br>
+                </div>
+                <hr>
+                <br>
+            </center>
+            <br><br>
+            <center>
+                <hr>
+                <br>
+                <div class="div3">
+                    <b><label>PLACA:</label></b>
+                    <input type="text" value="" id="placa3"> &nbsp;&nbsp;
+                    <label><b>TRANSPORTADORA:</label></b>
+                    <input type="text" value="" id="transportadora3">&nbsp;&nbsp;
+                    <label><b>DOCA:</label></b>
+                    <input type="text" value="" id="doca3">&nbsp;&nbsp;
+                    <input type="button" class="submit" id="inputButton3" value="CADASTRAR">&nbsp;&nbsp;&nbsp;
+                    <br>
+                </div>
+                <hr>
+
+            </center>
+        </form>
+
+        <script>
+            var btn = document.querySelector("#inputButton");
+
+            btn.addEventListener("click", function() {
+                var placa = document.querySelector("#placa").value;
+                localStorage.setItem('valueText', placa);
+                var transportadora = document.querySelector("#transportadora").value;
+                localStorage.setItem('valuetrans', transportadora);
+                var doca = document.querySelector("#doca").value;
+                localStorage.setItem('valueDoca', doca);
+            })
+
+            var btn3 = document.querySelector("#inputButton2");
+
+            btn3.addEventListener("click", function() {
+                var placa2 = document.querySelector("#placa2").value;
+                localStorage.setItem('valueplaca2', placa2);
+                var transportadora2 = document.querySelector("#transportadora2").value;
+                localStorage.setItem('valuetrans2', transportadora2);
+                var doca2 = document.querySelector("#doca2").value;
+                localStorage.setItem('valueDoca2', doca2);
+            })
+
+            var btn5 = document.querySelector("#inputButton3");
+
+            btn5.addEventListener("click", function() {
+                var placa3 = document.querySelector("#placa3").value;
+                localStorage.setItem('valueplaca3', placa3);
+                var transportadora3 = document.querySelector("#transportadora3").value;
+                localStorage.setItem('valuetrans3', transportadora3);
+                var doca3 = document.querySelector("#doca3").value;
+                localStorage.setItem('valueDoca3', doca3);
+            })
+        </script>
+
+
+
+</body>
+
+</html>
